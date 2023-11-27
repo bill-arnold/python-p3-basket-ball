@@ -182,3 +182,64 @@ def game_dict():
             ]
         }
     }
+
+
+# basket_ball.py
+
+def get_player_stats(player_name):
+    # Replace this with your actual logic to fetch player stats
+    players_stats = {
+        "Jarrett Allen": {"points_per_game": 16.1, "age": 24, "team": "Cleveland Cavaliers", "shoe_brand": "Nike"},
+        "Darius Garland": {"points_per_game": 21.7, "age": 22, "team": "Cleveland Cavaliers", "shoe_brand": "Nike"},
+        # Add other players
+    }
+
+    return players_stats.get(player_name, {})  # Default to an empty dictionary if player_name is not found
+
+def num_points_per_game(player_name):
+    player_stats = get_player_stats(player_name)
+    return player_stats.get("points_per_game", 0)
+
+def player_age(player_name):
+    player_stats = get_player_stats(player_name)
+    return player_stats.get("age", 0)
+
+def team_colors(team_name):
+    # Replace this with your actual logic to fetch team colors
+    teams_colors = {
+        "Cleveland Cavaliers": ["Wine", "Gold"],
+        "Washington Wizards": ["Red", "White", "Navy Blue"],
+        # Add other teams
+    }
+
+    return teams_colors.get(team_name, [])
+
+def team_names():
+    # Replace this with your actual logic to fetch team names
+    teams_names = ["Cleveland Cavaliers", "Washington Wizards"]  # Add other teams
+    return teams_names
+
+def player_numbers(team_name):
+    # Replace this with your actual logic to fetch player numbers
+    teams_numbers = {
+        "Cleveland Cavaliers": [31, 10, 4, 0, 35, 99],
+        "Washington Wizards": [3, 33, 1, 42, 6, 8],
+        # Add other teams
+    }
+
+    return teams_numbers.get(team_name, [])
+
+def player_stats(player_name):
+    return get_player_stats(player_name)
+
+def average_rebounds_by_shoe_brand():
+    # Replace this with your actual logic to calculate average rebounds by shoe brand
+    shoe_brand_rebounds = {
+        "Nike": 4.93,
+        "Adidas": 7.07,
+        "Puma": 8.50,
+        "Jordan": 3.80,
+    }
+
+    for brand, average_rebound in shoe_brand_rebounds.items():
+        print(f"{brand}: {average_rebound:.2f}")
